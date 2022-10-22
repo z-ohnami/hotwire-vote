@@ -1,0 +1,8 @@
+.container
+  h1
+    | 現在、以下の投票を受付中です。
+
+  .block
+    ul
+      - @subjects.each do |subject|
+        li = link_to subject.title, subject_path(subject.id)

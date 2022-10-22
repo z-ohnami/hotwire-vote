@@ -1,1 +1,25 @@
 // Entry point for your Sass build
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+label {
+  display: flex;
+}
+
+.block {
+  width: 400px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.result {
+  margin-top: 40px;
+}
