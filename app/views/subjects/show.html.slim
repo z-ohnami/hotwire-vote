@@ -1,3 +1,4 @@
+= turbo_stream_from @subject
 .container
   h1 = "お題: #{@subject.title}"
 
@@ -14,10 +15,4 @@
 
   .block.result
     p 投票の結果
-
-    - if @subject.votes.blank?
-      p まだ誰も投票していません。
-    - else
-      ul
-        - @subject.voted_choices.each.with_index(1) do |voted_choice, index|
-          li = "第#{index}位 #{voted_choice.name}  #{voted_choice.votes.size}票"
+    = render partial: 'subjects/voting_result', locals: { subject: @subject }
